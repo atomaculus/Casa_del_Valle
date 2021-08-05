@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Casa Del Valle</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="favicon/x-icon" href="/img/Casa del Valle logo 2 transp_Mesa de trabajo 1.png" />
+
+</head>
+
+<body id="restaurante">
+    <div class="container-fluid">
+        <div class="row">
+            <header class="col-12">
+                <nav id="navigation" class="navbar navbar-expand-lg navbar-dark rounded-bottom">
+                    <a class="navbar-brand" href="#">
+                        <img src="/img/Casa del Valle logo 2 transp_Mesa de trabajo 1.png" width="50" height="50" alt=""
+                            loading="lazy" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <h3>
+                                    <a class="nav-link disabled text-white" href="#" tabindex="-1"
+                                        aria-disabled="true">CASA DEL VALLE</a>
+                                </h3>
+                            </li>
+                        </ul>
+                        <ul id="menu-nav" class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index-en.html"><img class="border" data-toggle="tooltip"
+                                        data-placement="bottom" title="English" src="/img/bandera usa idioma.jpg"
+                                        width="25" height="15" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#casanostra">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sabores">Restaurant</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#shop">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contacto">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- Aca elige cuando viene a comer y etc  -->
+
+        </div>
+        <section class="mt-5 container">
+            <div>
+                <form action="" method="POST" class="row">
+                    <select class="form-select col-6 mb-3" id="selectorPersonas" aria-label="Default select example">
+                        <option selected>Cuantas personas?</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+
+                    </select>
+
+                    <div class="form-check col-3 text-center mb-3">
+                        <input class="form-check-input amPm" type="radio" name="flexRadioDefault" value="mediodia">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Mediodia
+                        </label>
+                    </div>
+                    <div class="form-check col-3 mb-3 ">
+                        <input class="form-check-input amPm" type="radio" name="flexRadioDefault" value="noche">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Noche
+                        </label>
+                    </div>
+                    <!-- seleccion de horario mediodia -->
+                    <section id="sectionPrueba" class="col-12 ml-5">
+                        <div class="form-check-inline horarioEspecificoAm">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                13.00hs
+                            </label>
+                        </div>
+                        <div class="form-check-inline horarioEspecificoAm">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                13.30hs
+                            </label>
+                        </div>
+                        <div class="form-check-inline horarioEspecificoAm">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                14.00hs
+                            </label>
+                        </div>
+                        <div class="form-check-inline horarioEspecificoAm">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                14.30hs
+                            </label>
+                        </div>
+                    </section>
+
+
+
+                    <!-- seleccion horario noche -->
+                    <br>
+                    <section class="col-12 ml-5 mb-3">
+                        <div class="form-check-inline horarioEspecificoPm">
+                            <input class="form-check-input " type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                20.30hs
+                            </label>
+                        </div>
+                        <div class="form-check-inline horarioEspecificoPm">
+                            <input class="form-check-input " type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                21.00hs
+                            </label>
+                        </div>
+                        <div class="form-check-inline horarioEspecificoPm">
+                            <input class="form-check-input " type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                21.30hs
+                            </label>
+                        </div>
+                        <div class="form-check-inline horarioEspecificoPm">
+                            <input class="form-check-input " type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                22.00hs
+                            </label>
+                        </div>
+                    </section>
+
+
+                    <!-- Arma tu burga -->
+                    <div class="card col-3 mx-auto border border-light" style="width: 18rem;" id="card_burga">
+                        <img src="/img/hamburgeja.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Arma tu Burga</h5>
+                            <p class="card-text">Podes seleccionar hasta 8 ingredientes entre los siguientes:
+                            <ul>
+                                <li>Pan</li>
+                                <li>Carne</li>
+                                <li>Queso Cheddar</li>
+                                <li>Roquefort</li>
+                                <li>Lechuga</li>
+                                <li>Tomate</li>
+                                <li>Cebolla</li>
+                                <li>Huevo Frito</li>
+                            </ul>
+                            </p>
+
+                            <a href="#seccionArmadora" id="btnArmador" class="btn btn-primary ml-3">Deploy
+                                Hamburguesa</a>
+                        </div>
+                    </div>
+                    <section id="seccionArmadora" class="claseDisable">
+                        <select class="form-select" id="btnCantidadBurgas" aria-label="Default select example">
+                            <option selected id="comensales"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <section>
+                            <div class="form-check">
+                                <input class="form-check-input seccionIngredientes" type="checkbox" value="Pan"
+                                    id="panChecked">
+                                <label class="form-check-label" for="panChecked">
+                                    Pan
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input seccionIngredientes" type="checkbox" value="Carne"
+                                    id="carneChecked">
+                                <label class="form-check-label" for="carneChecked">
+                                    Carne
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input seccionIngredientes" type="checkbox" value="Cheddar"
+                                    id="cheddarChecked">
+                                <label class="form-check-label" for="cheddarChecked">
+                                    Queso Cheddar
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input seccionIngredientes" type="checkbox" value="Roquefort"
+                                    id="roqueChecked">
+                                <label class="form-check-label" for="roqueChecked">
+                                    Roquefort
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input seccionIngredientes" type="checkbox" value="Lechuga"
+                                    id="lechuChecked">
+                                <label class="form-check-label" for="lechuChecked">
+                                    Lechuga
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input seccionIngredientes" type="checkbox" value="Tomate"
+                                    id="tomateChecked">
+                                <label class="form-check-label" for="tomateChecked">
+                                    Tomate
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input seccionIngredientes" type="checkbox" value="Cebolla"
+                                    id="ceboChecked">
+                                <label class="form-check-label" for="ceboChecked">
+                                    Cebolla
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input seccionIngredientes" type="checkbox" value="Huevo Frito"
+                                    id="huevoChecked">
+                                <label class="form-check-label" for="huevoChecked">
+                                    Huevo Frito
+                                </label>
+                            </div>
+                        </section>
+
+
+                        <!-- <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label"></label>
+                            <textarea class="form-control" placeholder="Aclaraciones..."
+                                id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div> -->
+                    </section>
+
+
+
+
+                    <input class="btn btn-primary col-12" id="btnSubmit" type="submit" value="Submit">
+                    <input class="btn btn-primary col-12" id="btnReset" type="reset" value="Reset">
+
+
+
+
+
+                </form>
+            </div>
+
+        </section>
+    </div>
+
+    <div id="personajesHp" class="mt-5">
+
+    </div>
+
+    <!-- <script src="/jquery/jquery-3.5.1.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="restaurant_main.js"></script>
+</body>
+
+</html>

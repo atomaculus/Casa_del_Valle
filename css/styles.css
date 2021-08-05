@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Cantoria";
+  src: url("//db.onlinewebfonts.com/t/1248948c8cc1dac3cf0c7a7a9b833b79.eot");
+  src: url("//db.onlinewebfonts.com/t/1248948c8cc1dac3cf0c7a7a9b833b79.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1248948c8cc1dac3cf0c7a7a9b833b79.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1248948c8cc1dac3cf0c7a7a9b833b79.woff") format("woff"), url("//db.onlinewebfonts.com/t/1248948c8cc1dac3cf0c7a7a9b833b79.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1248948c8cc1dac3cf0c7a7a9b833b79.svg#Cantoria") format("svg");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-ExtraLight.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body * {
+  font-family: "Cantoria";
+  font-weight: 100;
+}
+
+header {
+  background-color: #db8f79;
+}
+
+header #navigation {
+  background-color: #db8f79;
+}
+
+#video #myVideo {
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+#navigation #menu-nav li a {
+  color: white;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  text-transform: uppercase;
+}
+
+#navigation #menu-nav li a:hover {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+}
+
+#renders #carouselExampleIndicators {
+  height: 500px;
+}
+
+#renders #carouselExampleIndicators .carousel-inner div img {
+  height: 500px;
+}
+
+#main #casanostra {
+  padding-right: 2%;
+}
+
+#main .parrafos-main p {
+  font-family: "Montserrat";
+}
+
+#main .parrafos-main #foto-comidas {
+  width: 100%;
+}
+
+#main #parr-nuestra-casa {
+  margin-right: 8% !important;
+}
+
+#formulario form * {
+  font-family: "Montserrat";
+}
+
+#formulario form #contacto {
+  background-color: #db8f79;
+  border: #db8f79;
+}
+
+.claseDisable {
+  display: none !important;
+}
+
+#titulo,
+#casanostra,
+#nuestrachosa,
+#saboresvalle,
+#artesaniasvalle,
+#titulocontacto {
+  color: #db8f79;
+}
+
+#footer ul li {
+  font-family: "Montserrat";
+  border: none;
+}
+
+#footer #h2 {
+  color: #db8f79;
+}
+/*# sourceMappingURL=styles.css.map */
