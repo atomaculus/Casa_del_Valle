@@ -75,7 +75,9 @@ $("#btnArmador").click(function (evento) {
 
 
 
-comensales.innerHTML = `${selectorPersonas.value} hamburguesas` //VER ESTO
+//comensales.innerHTML = `${selectorPersonas.value} hamburguesas` //VER ESTO
+
+comensales.innerHTML = `${getLocalStorage("cantidad")} hamburguesas` //VER ESTO
 
 btnCantidadBurgas.addEventListener("click", () => saveLocalStorage("cantidad brgr", btnCantidadBurgas.value))
 let amntBrgrEnNum = Number(getLocalStorage("cantidad brgr"))
@@ -107,7 +109,9 @@ $("#btnSubmit").click(function (event) {
     console.log("jquery anda bien")
     event.preventDefault();
     let contenedor = document.createElement("div")
-    contenedor.innerHTML = `<h4> los ingredientes elegidos son ${arrayIngr}</h4>`
+    contenedor.innerHTML = `<div class="row bg-success">
+    <h4 class="ml-5"> los ingredientes elegidos son ${arrayIngr}</h4>
+</div>`
     document.body.appendChild(contenedor);
 
     arrayHamburgesas.push(new hamburgesasAlVapor(arrayIngr));
@@ -167,9 +171,9 @@ const baseurl = "http://dataservice.accuweather.com";
 const apikey = "yj4YSPmk73PG2GUnldHcXrl3JRsEHpAJ";
 
 $.getJSON(`${baseurl}/locations/v1/cities/search`, {
-    apikey: apikey,
-    q: "San%20salvador%20de%20jujuy",
-})
+        apikey: apikey,
+        q: "San%20salvador%20de%20jujuy",
+    })
     .then(function () {
         return $.getJSON(`${baseurl}/forecasts/v1/daily/5day/${key}`, {
             apikey: apikey,
@@ -198,34 +202,36 @@ $.getJSON(`${baseurl}/locations/v1/cities/search`, {
 
 
 
-// function crearCards(data) {
-//     console.log(data);
+function crearCards(data) {
+    console.log(data);
 
-//     let contenedor2 = document.createElement("div")
-//     $(data).each(function (index, personaje) {
-//         contenedor2.innerHTML = ` hola
-//         <div class="card" style="width: 18rem;">
-//             <img class="card-img-top" src="${personaje.image}" alt="Card image cap">
-//             <div class="card-body">
-//                 <h5 class="card-title">${personaje.name}</h5>
-//                 <p class="card-text">El actor que hace de este personaje es ${personaje.actor} y su género es ${personaje.gender}.</p>
-//             </div>
-//         </div>
-//         `
-//         document.body.appendChild(contenedor2);
-//     })
-// }
+    let contenedor2 = document.createElement("div")
+    $(data).each(function (index, tiempo) {
+        contenedor2.innerHTML = ` hola
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="${tiempo.Day.Icon}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">${DailyForecasts[0].temperature}</h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+        `
+        document.body.appendChild(contenedor2);
+    })
+}
+
+
 
 fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify({
-        title: 'Hola',
-        body: 'Rube como estas?',
-        userId: 1,
-    }),
-    headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-    },
-})
+        method: 'POST',
+        body: JSON.stringify({
+            title: 'Hola',
+            body: 'Rube como estas?',
+            userId: 1,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
     .then((response) => response.json())
     .then((json) => console.log(json));
