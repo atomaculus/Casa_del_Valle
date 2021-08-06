@@ -177,11 +177,15 @@ $.getJSON(`${baseurl}/locations/v1/cities/search`, {
     .then(function () {
         return $.getJSON(`${baseurl}/forecasts/v1/daily/5day/${key}`, {
             apikey: apikey,
+            language: "es",
+            metric: "true"
         });
     })
     .then(function (tempData) {
         const data = tempData;
         console.log(data);
+        // console.log(data.DailyForecasts[0].Day.IconPhrase)
+        crearCards(data)
     });
 
 
@@ -200,25 +204,38 @@ $.getJSON(`${baseurl}/locations/v1/cities/search`, {
 //     console.log("completado bebote")
 // })
 
-
-
 function crearCards(data) {
-    console.log(data);
-
-    let contenedor2 = document.createElement("div")
-    $(data).each(function (index, tiempo) {
-        contenedor2.innerHTML = ` hola
+    $(data.DailyForecasts).each(function (element) {
+        $("#contenedor2").append(`
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="${tiempo.Day.Icon}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">${DailyForecasts[0].temperature}</h5>
-                <p class="card-text"></p>
+            <h5 class="card-title">${data.DailyForecasts[element].Date}</h5>
+                
+                
+                <p class="card-text">${data.DailyForecasts[element].Day.IconPhrase}, ${data.DailyForecasts[element].Temperature.Maximum.Value} <span>${data.DailyForecasts[element].Temperature.Maximum.Unit}</span></p>
             </div>
         </div>
-        `
-        document.body.appendChild(contenedor2);
+        `);
     })
 }
+
+// function crearCards(data) {
+//     console.log(data);
+
+//     let contenedor2 = document.querySelector("#contenedor2")
+//     $(data.DailyForecasts).each(function (index, tiempo) {
+//         contenedor2.innerHTML = `
+//         <div class="card" style="width: 18rem;">
+
+//             <div class="card-body">
+//                 <h5 class="card-title">${DailyForecasts[0].temperature}</h5>
+//                 <p class="card-text"></p>
+//             </div>
+//         </div>
+//         `
+//         document.body.appendChild(contenedor2);
+//     })
+// }
 
 
 
